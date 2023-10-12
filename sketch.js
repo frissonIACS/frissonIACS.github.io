@@ -50,7 +50,7 @@ var Timings = 'set here (e.g. ta,tb,tc,6)'
 var P1_Strength = 255
 var P2_Strength = 255
 var P3_Strength = 255
-var M1_Strength = 30
+var M1_Strength = 0
 
 // gui
 var visible = true;
