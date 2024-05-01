@@ -3,7 +3,11 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-const serviceUuid = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E";
+//const serviceUuid = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E";
+
+const serviceUuid = '00002220-0000-1000-8000-00805f9b34fb';
+
+var isRFduino = 1 ;
 
 let writeCharacteristic,notifyCharacteristic;
 let myValue = 0;
@@ -352,6 +356,11 @@ var ble_index = 0
 var ble_strength = 0
 
 function writeToBle() {
+
+if(isRFduino){
+    rfduino_writeToBle();
+    return;
+}
 timeIndex = 0;
 let myVar = setInterval(function(){elementTimer();}, 100);
 
@@ -399,7 +408,7 @@ function sendBLEPacket(){
 
 }
 
-function bak_writeToBle() {
+function rfduino_writeToBle() {
 
 if(isConnected){
   var sendDataPacket = new Uint8Array([20,...vals, ...tsP, ...tlP]);
