@@ -38,13 +38,13 @@ var P3_Stop = 3.0
 var M1_Start = 2.5
 var M1_Stop = 3.0
 
-var Stimulus_Duration = 60
-var Timings = 'set here (e.g. ta,tb,tc,6)'
+var Stimulus_Duration = 250
+var Timings = '52,93,170,210'
 
 var P1_Strength = 255
 var P2_Strength = 255
 var P3_Strength = 255
-var M1_Strength = 100
+var M1_Strength = 0
 
 // gui
 var visible = true;
